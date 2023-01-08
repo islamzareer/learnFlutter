@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:login_and_register/chat_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   var passwordController = TextEditingController();
@@ -59,6 +60,10 @@ class LoginScreen extends StatelessWidget {
                     onPressed: () {
                       print(emailController.text);
                       print(passwordController.text);
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ChatScreen()));
                     },
                     child: const Text(
                       "LOGIN",
